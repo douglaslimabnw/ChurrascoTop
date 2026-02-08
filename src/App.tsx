@@ -4,6 +4,7 @@ import { useTheme } from './hooks/useTheme';
 import { ChurrascoForm } from './components/ChurrascoForm';
 import { ChurrascoVisual } from './components/ChurrascoVisual';
 import { ResultsPanel } from './components/ResultsPanel';
+import { AffiliateProducts } from './components/AffiliateProducts';
 import { AdSlot } from './components/AdSlot';
 import { ThemeToggle } from './components/ThemeToggle';
 
@@ -34,7 +35,7 @@ export function App() {
               <h1 className={`text-lg font-extrabold tracking-tight sm:text-xl ${
                 dark ? 'text-dark-100' : 'text-charcoal-900'
               }`}>
-                Churrascômetro
+                Bora de Churras!
               </h1>
               <p className={`hidden text-xs sm:block ${
                 dark ? 'text-dark-400' : 'text-charcoal-500'
@@ -128,6 +129,11 @@ export function App() {
             <AdSlot format="horizontal" className="mt-4" />
           </div>
         </div>
+
+        {/* Affiliate Products - full width below main content */}
+        <div className="mt-8">
+          <AffiliateProducts />
+        </div>
       </main>
 
       {/* Footer */}
@@ -143,7 +149,7 @@ export function App() {
             }`}>
               <span className="text-lg">🔥</span>
               <span>
-                <strong className={dark ? 'text-dark-200' : 'text-charcoal-700'}>Churrascômetro</strong> — Feito com ❤️ para
+                <strong className={dark ? 'text-dark-200' : 'text-charcoal-700'}>Bora de Churras!</strong> — Feito com ❤️ para
                 churrasqueiros
               </span>
             </div>
