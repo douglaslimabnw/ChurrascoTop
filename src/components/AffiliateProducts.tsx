@@ -4,7 +4,6 @@ interface Product {
   name: string;
   emoji: string;
   description: string;
-  price: string;
   url: string;
   badge?: string;
 }
@@ -14,7 +13,6 @@ const products: Product[] = [
     name: 'Kit Churrasco Inox',
     emoji: '🔥',
     description: 'Jogo de Churrasco Tradicional 3 Peças - Tramontina',
-    price: 'R$ 89,90',
     url: 'https://amzn.to/3O16yAd',
     badge: 'Mais vendido',
   },
@@ -22,14 +20,12 @@ const products: Product[] = [
     name: 'Acendedor de Carvão',
     emoji: '♨️',
     description: 'Acendedor Carvão Lenha Bastão - 15 Unidades',
-    price: 'R$ 39,90',
     url: 'https://amzn.to/46CZ7W9',
   },
   {
     name: 'Termômetro Digital',
     emoji: '🌡️',
     description: 'Ponto perfeito da carne toda vez',
-    price: 'R$ 25,00',
     url: 'https://amzn.to/4rcz14U',
     badge: 'Essencial',
   },
@@ -37,21 +33,18 @@ const products: Product[] = [
     name: 'Luvas Térmicas',
     emoji: '🧤',
     description: 'Profissional Até 600ºC De 10 a 15 Segundo',
-    price: 'R$ 79,90',
     url: 'https://amzn.to/4tptoS2',
   },
   {
     name: 'Tábua de Corte Bambu',
     emoji: '🪵',
     description: 'Grande, resistente e fácil de limpar',
-    price: 'R$ 54,90',
     url: 'https://amzn.to/4cf4Y7F',
   },
   {
     name: 'Kit Temperos Premium',
     emoji: '🧂',
     description: 'Salsa, Páprica Doce, Tomilho, Manjericão e Mostarda e mais',
-    price: 'R$ 35',
     url: 'https://amzn.to/4qhTCmN',
   },
 ];
@@ -83,11 +76,7 @@ export function AffiliateProducts() {
           >
             {/* Badge */}
             {product.badge && (
-              <span className={`absolute -top-2 right-3 rounded-full px-2 py-0.5 text-[10px] font-bold ${
-                dark
-                  ? 'bg-brand-500 text-white'
-                  : 'bg-brand-500 text-white'
-              }`}>
+              <span className="absolute -top-2 right-3 rounded-full bg-brand-500 px-2 py-0.5 text-[10px] font-bold text-white">
                 {product.badge}
               </span>
             )}
@@ -101,27 +90,22 @@ export function AffiliateProducts() {
 
             {/* Info */}
             <div className="flex-1 min-w-0">
-              <div className="flex items-start justify-between gap-2">
-                <h4 className={`text-sm font-semibold leading-tight ${
-                  dark ? 'text-dark-200' : 'text-charcoal-800'
-                }`}>
-                  {product.name}
-                </h4>
-                <span className={`shrink-0 text-xs font-bold ${
-                  dark ? 'text-brand-400' : 'text-brand-600'
-                }`}>
-                  {product.price}
-                </span>
-              </div>
+              <h4 className={`text-sm font-semibold leading-tight ${
+                dark ? 'text-dark-200' : 'text-charcoal-800'
+              }`}>
+                {product.name}
+              </h4>
               <p className={`mt-0.5 text-xs leading-relaxed ${
                 dark ? 'text-dark-400' : 'text-charcoal-500'
               }`}>
                 {product.description}
               </p>
-              <span className={`mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium ${
-                dark ? 'text-brand-400' : 'text-brand-600'
-              } opacity-0 transition-opacity group-hover:opacity-100`}>
-                Ver na Amazon
+              <span className={`mt-2 inline-flex items-center gap-1 rounded-md px-2.5 py-1 text-[11px] font-semibold transition-all ${
+                dark
+                  ? 'bg-brand-500/15 text-brand-400 group-hover:bg-brand-500/25'
+                  : 'bg-brand-50 text-brand-600 group-hover:bg-brand-100'
+              }`}>
+                Ver preço na Amazon
                 <svg className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
                 </svg>

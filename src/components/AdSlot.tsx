@@ -21,10 +21,11 @@ export function AdSlot({ format = 'horizontal', className = '' }: AdSlotProps) {
         `}
       >
         {/* 
-          Google AdSense Ad Unit - Replace with real ad code:
+          Google AdSense Ad Unit - Troque XXXXXXXXXX pelo data-ad-slot gerado no painel do AdSense:
+          
           <ins class="adsbygoogle"
             style="display:block"
-            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+            data-ad-client="ca-pub-3220309716820755"
             data-ad-slot="XXXXXXXXXX"
             data-ad-format="auto"
             data-full-width-responsive="true">
