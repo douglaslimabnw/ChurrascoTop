@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://boraprochurras.online/sitemap.xml
+Sitemap: https://boradechurras.online/sitemap.xml
